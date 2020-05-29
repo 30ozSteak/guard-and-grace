@@ -3,9 +3,11 @@ module.exports = {
     title: `Nick Dambrosio, Software Developer`,
     description: `A Collection of Dangerous Thoughts and Ideas`,
     author: `@iaaafm`,
+    siteUrl: `https://www.nick-dambrosio.com`,
   },
   plugins: [
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
