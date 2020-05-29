@@ -5,8 +5,14 @@ const Contact = () => {
   return (
     <form method="post" netlify-honeypot="bot-field" data-netlify="true">
       <input type="hidden" name="bot-field" />
-      <label>Name</label>
-      <label>Email</label>
+      <label>
+        Name
+        <input type="text" name="name" />
+      </label>
+      <label>
+        Email
+        <input type="email" name="name" />
+      </label>
       <label>
         Message
         <textarea name="message" id="message" row="5" />

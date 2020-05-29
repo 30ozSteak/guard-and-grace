@@ -17,12 +17,17 @@ const MainLayout = styled.main`
 `
 
 const Footer = styled.footer`
-  text-transform: uppercase;
+  text-transform: lowercase;
   text-align: center;
   font-size: 0.6rem;
   font-family: Arial, Helvetica, sans-serif;
   a {
     text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+  }
+  a:hover {
+    color: purple;
   }
 `
 
@@ -64,8 +69,10 @@ const Layout = ({ children, location }) => {
           <div>{children}</div>
         </MainLayout>
         <Footer>
-          © {new Date().getFullYear()}, Built with ❤️ and
-          <a href="https://www.gatsbyjs.org"> Gatsby.js</a>
+          © {new Date().getFullYear()}{" "}
+          <a href="https://www.linkedin.com/in/ndambr/">me, </a>built in
+          <a href="https://www.gatsbyjs.org"> Gatsby.js</a>,{" "}
+          <a href="https://github.com/30ozSteak/guard-and-grace">source</a>
         </Footer>
       </div>
     </div>
