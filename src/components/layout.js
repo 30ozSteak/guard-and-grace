@@ -16,6 +16,16 @@ const MainLayout = styled.main`
   grid-template-columns: 1fr 4fr;
 `
 
+const Footer = styled.footer`
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  a {
+    text-decoration: none;
+  }
+`
+
 const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -48,17 +58,15 @@ const Layout = ({ children, location }) => {
           </div>
         )}
       </Spring>
-      {/* {location.pathname === "/" && (
-      )} this is conditional rendering based on what page the user is on*/}
       <div>
         <MainLayout>
           <Archive />
           <div>{children}</div>
         </MainLayout>
-        <footer>
+        <Footer>
           © {new Date().getFullYear()}, Built with ❤️ and
           <a href="https://www.gatsbyjs.org"> Gatsby.js</a>
-        </footer>
+        </Footer>
       </div>
     </div>
   )
@@ -66,6 +74,11 @@ const Layout = ({ children, location }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+}
+
+// we set this as an empty object because the browser wont be able to do location.anything since it's not inside our computer
+Layout.defaultProps = {
+  location: {},
 }
 
 export default Layout
