@@ -7,6 +7,7 @@ import styled from "styled-components"
 
 const HeaderWrapper = styled.div`
   font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 0;
 
   img {
     marginbottom: 0;

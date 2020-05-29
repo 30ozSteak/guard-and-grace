@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
-import { Spring } from "react-spring"
+import { Spring } from "react-spring/renderprops"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
@@ -36,11 +36,12 @@ const Layout = ({ children, location }) => {
   `)
 
   return (
-    <>
+    <div>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Spring>
-        from={{ height: 100 }}
-        to={{ height: 200 }}
+      <Spring
+        from={{ height: location.pathname === "/" ? 100 : 500 }}
+        to={{ height: 500 }}
+      >
         {styles => (
           <div style={{ overflow: "hidden", ...styles }}>
             <Img fluid={data.file.childImageSharp.fluid} />
@@ -48,19 +49,18 @@ const Layout = ({ children, location }) => {
         )}
       </Spring>
       {/* {location.pathname === "/" && (
-      )} */}
+      )} this is conditional rendering based on what page the user is on*/}
       <div>
         <MainLayout>
           <Archive />
           <div>{children}</div>
         </MainLayout>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          © {new Date().getFullYear()}, Built with ❤️ and
+          <a href="https://www.gatsbyjs.org"> Gatsby.js</a>
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 
