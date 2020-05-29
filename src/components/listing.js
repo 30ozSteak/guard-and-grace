@@ -12,7 +12,7 @@ const LISTING_QUERY = graphql`
         node {
           excerpt
           frontmatter {
-            date(formatString: "MM 'YY")
+            date(formatString: "MM DD 'YY")
             title
             slug
           }
@@ -23,8 +23,6 @@ const LISTING_QUERY = graphql`
 `
 
 const Post = styled.article`
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 200;
   padding: 1rem;
   margin-bottom: 1rem;
   a {

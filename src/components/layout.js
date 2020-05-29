@@ -1,19 +1,19 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Img from "gatsby-image"
+
 import { Spring } from "react-spring/renderprops"
 import { useStaticQuery, graphql } from "gatsby"
+
 import styled from "styled-components"
 
 import Header from "./header"
-import Archive from "./archive"
+import Contact from "./contact"
 import "./layout.css"
 
 const MainLayout = styled.main`
-  maxwidth: 90%;
-  margin: 5rem;
-  display: grid;
-  grid-template-columns: 1fr 4fr;
+  text-align: left;
+  margin: auto;
+  max-width: 50%;
 `
 
 const Footer = styled.footer`
@@ -50,28 +50,29 @@ const Layout = ({ children, location }) => {
     }
   `)
 
+  // the image query above isn't being used but is being saved for posterity and future understandings
+
   return (
     <div>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Spring
-        from={{ height: location.pathname === "/" ? 100 : 500 }}
-        to={{ height: 500 }}
+        from={{ height: location.pathname === "/" ? 300 : 1000 }}
+        to={{ height: 1000 }}
       >
         {styles => (
           <div style={{ overflow: "hidden", ...styles }}>
-            <Img fluid={data.file.childImageSharp.fluid} />
+            <MainLayout>
+              {/* <Archive /> */}
+              <div>{children}</div>
+            </MainLayout>
           </div>
         )}
       </Spring>
+      <Contact />
       <div>
-        <MainLayout>
-          <Archive />
-          <div>{children}</div>
-        </MainLayout>
         <Footer>
           © {new Date().getFullYear()}{" "}
-          <a href="https://www.linkedin.com/in/ndambr/">me, </a>built in
-          <a href="https://www.gatsbyjs.org"> Gatsby.js</a>,{" "}
+          <a href="https://www.linkedin.com/in/ndambr/">Nick Dambrosio, </a>
           <a href="https://github.com/30ozSteak/guard-and-grace">source</a>
         </Footer>
       </div>

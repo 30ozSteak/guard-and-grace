@@ -1,11 +1,16 @@
 import React from "react"
 import Layout from "../components/layout"
+import Archive from "../components/archive"
 
 const About = ({ location }) => (
   <Layout location={location}>
     <div>
-      <h1>Hello</h1>
-      <h1>Would you like to learn about steak</h1>
+      <h1>About</h1>
+      <p>
+        Nick is a software developer in Denver, Colorado. An endless well of
+        somewhat interesting
+      </p>
+      {/* <Archive /> */}
     </div>
   </Layout>
 )

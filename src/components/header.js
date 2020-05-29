@@ -3,8 +3,6 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 
-// import gatsbyLogo from "../images/gatsby-icon.png"
-
 const HeaderWrapper = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 0;
@@ -16,16 +14,23 @@ const HeaderWrapper = styled.div`
 
 const Nav = styled.div`
   color: black;
-  margin: 0 auto;
-  max-width: 960px;
+  text-align: left;
+
+  display: flex;
+  justify-content: center;
   padding: 1rem 0;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 `
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, siteDescription }) => (
   <HeaderWrapper>
     <Nav>
       <h1>
         <Link to="/">{siteTitle}</Link>
+        <p>{siteDescription}</p>
       </h1>
     </Nav>
   </HeaderWrapper>
@@ -36,7 +41,8 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: `Nicks Blog`,
+  siteTitle: `skate better`,
+  siteDescription: `a software development blog by nick dambrosio`,
 }
 
 export default Header

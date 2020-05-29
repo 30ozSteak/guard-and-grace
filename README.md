@@ -5,6 +5,6 @@
   </a>
 </p>
 <h1 align="center">
-  A place for steak
+  It's an anagram for mistake
 </h1>
 <!-- AUTO-GENERATED-CONTENT:END -->
