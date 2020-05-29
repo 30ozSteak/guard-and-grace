@@ -5,7 +5,10 @@ module.exports = {
     author: `@iaaafm`,
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,8 +16,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -33,6 +34,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/posts`,
         name: "posts",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/images`,
+        name: "images",
       },
     },
     "gatsby-transformer-remark",

@@ -11,7 +11,7 @@ import Layout from "./layout"
 const postLayout = props => {
   const { markdownRemark } = props.data
   return (
-    <Layout>
+    <Layout location={props.location}>
       <h1>{markdownRemark.frontmatter.title}</h1>
       <div
         dangerouslySetInnerHTML={{
