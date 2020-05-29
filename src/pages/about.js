@@ -4,9 +4,8 @@ import Layout from "../components/layout"
 const About = ({ location }) => (
   <Layout location={location}>
     <div>
-      <h1>Nick Dambrosio</h1>
-      <h1>This is About Me</h1>
-      <p>Paragraph</p>
+      <h1>Hello</h1>
+      <h1>Would you like to learn about steak</h1>
     </div>
   </Layout>
 )
