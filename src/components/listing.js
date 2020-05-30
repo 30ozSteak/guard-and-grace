@@ -10,7 +10,7 @@ const LISTING_QUERY = graphql`
     ) {
       edges {
         node {
-          excerpt
+          excerpt(pruneLength: 140)
           frontmatter {
             date(formatString: "MM DD 'YY")
             title
@@ -30,23 +30,12 @@ const Post = styled.article`
     text-decoration: none;
   }
   p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   h2 {
     margin-bottom: 0;
     font-weight: 900;
-    font-size: 1.5rem;
-  }
-  .read-more-link {
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    border-bottom: 1.5px solid transparent;
-    transition: 0.1s;
-    padding-bottom: 0.2rem;
-    color: #524763;
-  }
-  .read-more-link:hover {
-    border-bottom: 1.5px solid #524763;
+    font-size: 1.9rem;
   }
 `
 // box shadow that's subtle and good for cards
@@ -67,12 +56,6 @@ const Listing = () => {
             </Link>
             <p>{edge.node.frontmatter.date}</p>
             <p>{edge.node.excerpt}</p>
-            <Link
-              class="read-more-link"
-              to={`/posts${edge.node.frontmatter.slug}`}
-            >
-              Read More
-            </Link>
           </Post>
         ))}
       </ul>

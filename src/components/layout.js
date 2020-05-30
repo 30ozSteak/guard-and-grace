@@ -10,6 +10,11 @@ import Header from "./header"
 import Contact from "./contact"
 import "./layout.css"
 
+const ThemeProvider = styled.div`
+  h2: #ff338b;
+  color: white;
+`
+
 const MainLayout = styled.main`
   text-align: left;
   margin: auto;
@@ -18,16 +23,17 @@ const MainLayout = styled.main`
 
 const Footer = styled.footer`
   text-transform: lowercase;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-align: center;
-  font-size: 0.6rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
   a {
     text-decoration: none;
     color: inherit;
     transition: 0.2s;
   }
   a:hover {
-    color: purple;
+    color: #ff338b;
   }
 `
 
@@ -53,7 +59,7 @@ const Layout = ({ children, location }) => {
   // the image query above isn't being used but is being saved for posterity and future understandings
 
   return (
-    <div>
+    <ThemeProvider>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Spring
         from={{ height: location.pathname === "/" ? 300 : 1000 }}
@@ -76,7 +82,7 @@ const Layout = ({ children, location }) => {
           <a href="https://github.com/30ozSteak/guard-and-grace">source</a>
         </Footer>
       </div>
-    </div>
+    </ThemeProvider>
   )
 }
 

@@ -4,7 +4,6 @@ import React from "react"
 import styled from "styled-components"
 
 const HeaderWrapper = styled.div`
-  font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 0;
 
   img {
@@ -13,24 +12,28 @@ const HeaderWrapper = styled.div`
 `
 
 const Nav = styled.div`
-  color: black;
+  color: white;
   text-align: left;
-
-  display: flex;
-  justify-content: center;
-  padding: 1rem 0;
+  width: 50%;
+  margin: 4rem auto;
+  h1 {
+    display: flex;
+    justify-content: space-between;
+  }
   a {
     text-decoration: none;
-    color: black;
+    color: #e972a5;
+    font-weight: 300;
+    font-size: 1.3rem;
   }
 `
 
-const Header = ({ siteTitle, siteDescription }) => (
+const Header = ({ siteTitle }) => (
   <HeaderWrapper>
     <Nav>
       <h1>
         <Link to="/">{siteTitle}</Link>
-        <p>{siteDescription}</p>
+        <Link to="/about">About</Link>
       </h1>
     </Nav>
   </HeaderWrapper>

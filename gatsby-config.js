@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `skate`,
+    title: `Nick Dambrosio`,
     description: `a software development blog by nick dambrosio`,
     author: `@iaaafm`,
     siteUrl: `https://www.nick-dambrosio.com`,
