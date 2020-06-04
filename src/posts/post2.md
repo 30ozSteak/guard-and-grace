@@ -2,9 +2,9 @@
 slug: "/second-post"
 date: "2020-05-28"
 title: "Medium Rare Steak"
+desc: "Extra Hot Sauce"
+topics: "Javascript"
 ---
-
-# Medium Rare Steak
 
 I'm baby gochujang ethical offal tofu bitters mustache retro knausgaard typewriter meditation. Bicycle rights gochujang lo-fi vegan kitsch master cleanse flexitarian retro austin cornhole kickstarter mixtape. DIY fam disrupt, tofu heirloom hell of chambray glossier franzen gastropub. Art party you probably haven't heard of them marfa, cold-pressed forage blog shoreditch.
 

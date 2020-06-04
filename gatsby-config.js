@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Nick Dambrosio`,
-    description: `a software development blog by nick dambrosio`,
+    title: `Hooks and Hamburgers`,
+    description: `A Software Development blog by Nick Dambrosio`,
     author: `@iaaafm`,
+    authorName: "Nick Dambrosio",
     siteUrl: `https://www.nick-dambrosio.com`,
   },
   plugins: [
@@ -30,7 +31,12 @@ module.exports = {
         icon: `src/images/steak-icon.png`, // This path is relative to the root of the site.
       },
     },
-    "gatsby-plugin-offline",
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/about`],
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

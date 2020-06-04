@@ -2,9 +2,9 @@
 slug: "/seventh-post"
 date: "2020-05-29"
 title: "Well-done steak"
+desc: "Extra Hot Sauce"
+topics: "Javascript"
 ---
-
-# Well done steak
 
 Thanks dad, I'm baby gochujang ethical offal tofu bitters mustache retro knausgaard typewriter meditation. Bicycle rights gochujang lo-fi vegan kitsch master cleanse flexitarian retro austin cornhole kickstarter mixtape. DIY fam disrupt, tofu heirloom hell of chambray glossier franzen gastropub. Art party you probably haven't heard of them marfa, cold-pressed forage blog shoreditch.
 

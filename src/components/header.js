@@ -1,51 +1,100 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import profilePicture from "../images/steak-profile.jpg"
 import React from "react"
 import styled from "styled-components"
 
 const HeaderWrapper = styled.div`
-  margin-bottom: 0;
-
-  img {
-    marginbottom: 0;
+  .blog-name {
+    text-decoration: none;
+    color: #f683b5;
+    font-weight: 900;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.2s;
+    margin: 0;
   }
-`
-
-const Nav = styled.div`
-  color: white;
-  text-align: left;
-  width: 50%;
-  margin: 4rem auto;
-  h1 {
-    display: flex;
-    justify-content: space-between;
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.3rem;
+    margin auto 0;
+  }
+  .blog-name:hover {
+    filter: brightness(1.2);
+  }
+  .blog-name.smaller {
+    font-size: 1rem;
   }
   a {
-    text-decoration: none;
-    color: #e972a5;
-    font-weight: 300;
-    font-size: 1.3rem;
+    color: #f683b5;
   }
 `
 
-const Header = ({ siteTitle }) => (
+const AuthorBlock = styled.div`
+  width: 100%;
+  height: 3rem;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  display: flex;
+  img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+  }
+  p {
+    color: white;
+    margin-left: 1rem;
+    margin-bottom: 0;
+  }
+  a {
+    margin-left: 1rem;
+    font-size: 1rem;
+    transition: 0.2s;
+  }
+  a:hover {
+    filter: brightness(1.2);
+  }
+`
+
+const Header = ({ description, siteTitle, location }) => (
   <HeaderWrapper>
-    <Nav>
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-        <Link to="/about">About</Link>
-      </h1>
-    </Nav>
+    <Link
+      to="/"
+      class="blog-title"
+      className={location.pathname === "/" ? "blog-name" : "blog-name smaller"}
+    >
+      {siteTitle}
+    </Link>
+    {location.pathname === "/" ? (
+      <AuthorBlock>
+        <img src={profilePicture} alt={`Nick Dambrosio`} />
+        <div>
+          <p className="about">Software Development Blog by Nick Dambrosio</p>
+          <a href="/" className="about">
+            Twitter
+          </a>
+          <a href="/" className="about">
+            Github
+          </a>
+        </div>
+      </AuthorBlock>
+    ) : (
+      <div />
+    )}
   </HeaderWrapper>
 )
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  siteDescription: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: `skate better`,
-  siteDescription: `a software development blog by nick dambrosio`,
+  siteTitle: `Complex State`,
+  siteDescription: `A Software Development blog by Nick Dambrosio`,
 }
 
 export default Header

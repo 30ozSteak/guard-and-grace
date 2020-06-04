@@ -1,10 +1,5 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="/src/images/steak-icon.png" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  It's an anagram for mistake
-</h1>
-<!-- AUTO-GENERATED-CONTENT:END -->
+# [Complex State](nick-dambrosio.com/)
+
+Personal blog. Forked from [Gatsby starter](https://github.com/gatsbyjs/gatsby-starter-blog).
+
+To run locally, `yarn`, then `yarn dev`, then open https://localhost:8000.

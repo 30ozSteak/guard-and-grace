@@ -1,22 +1,17 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "./layout"
-// import Img from "gatsby-image"
-
-// static query can be used anywhere you want, does not accept variables / parameters
-// cant interact with context
-
-// page query must be used on pages, can accept variables
-// can interact with context
 
 const postLayout = props => {
   const { markdownRemark } = props.data
   return (
     <Layout location={props.location}>
-      <h1>{markdownRemark.frontmatter.title}</h1>
-      {/* <Img fluid={data.file.childImageSharp.fluid} /> */}
-
-      <div
+      <h1 style={{ color: "white", marginTop: "3rem", marginBottom: "0" }}>
+        {markdownRemark.frontmatter.title}
+      </h1>
+      <p style={{ color: "lightgray" }}>{markdownRemark.frontmatter.date}</p>
+      <p
+        style={{ color: "white", fontSize: "1.2rem", lineHeight: "2rem" }}
         dangerouslySetInnerHTML={{
           __html: markdownRemark.html,
         }}

@@ -10,7 +10,7 @@ const LISTING_QUERY = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 140)
+          excerpt(pruneLength: 75)
           frontmatter {
             date(formatString: "MM DD 'YY")
             title
@@ -23,25 +23,31 @@ const LISTING_QUERY = graphql`
 `
 
 const Post = styled.article`
-  padding: 1rem;
-  margin-bottom: 1rem;
+  margin: 3rem 0;
   a {
-    color: #000;
     text-decoration: none;
+    color: white;
   }
-  p {
+  a:hover {
+    color: #f683b5;
+  }
+  p.date {
+    font-size: 0.8rem;
+    color: #d3d3d3;
+    margin-bottom: 0;
+  }
+  p.exerpt {
     font-size: 1rem;
+    color: #d3d3d3;
+    font-family: Arial, Helvetica, sans-serif;
   }
   h2 {
     margin-bottom: 0;
+    color: white;
     font-weight: 900;
     font-size: 1.9rem;
   }
 `
-// box shadow that's subtle and good for cards
-// border-radius: 4px;
-
-// box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.05);
 
 const Listing = () => {
   const data = useStaticQuery(LISTING_QUERY)
@@ -54,8 +60,8 @@ const Listing = () => {
             <Link to={`/posts${edge.node.frontmatter.slug}`}>
               <h2>{edge.node.frontmatter.title}</h2>
             </Link>
-            <p>{edge.node.frontmatter.date}</p>
-            <p>{edge.node.excerpt}</p>
+            <p className="date">{edge.node.frontmatter.date}</p>
+            <p className="exerpt">{edge.node.excerpt}</p>
           </Post>
         ))}
       </ul>
