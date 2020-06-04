@@ -15,6 +15,8 @@ const LISTING_QUERY = graphql`
             date(formatString: "MM DD 'YY")
             title
             slug
+            desc
+            topics
           }
         }
       }
@@ -38,7 +40,7 @@ const Post = styled.article`
   }
   p.exerpt {
     font-size: 1rem;
-    color: #d3d3d3;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
   }
   h2 {
@@ -60,7 +62,10 @@ const Listing = () => {
             <Link to={`/posts${edge.node.frontmatter.slug}`}>
               <h2>{edge.node.frontmatter.title}</h2>
             </Link>
-            <p className="date">{edge.node.frontmatter.date}</p>
+            <p className="date">
+              {edge.node.frontmatter.date} - {edge.node.frontmatter.topics}
+            </p>
+            {/* <p className="exerpt"> {edge.node.frontmatter.desc}</p>{" "} */}
             <p className="exerpt">{edge.node.excerpt}</p>
           </Post>
         ))}

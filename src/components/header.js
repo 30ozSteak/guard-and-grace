@@ -32,7 +32,9 @@ const HeaderWrapper = styled.div`
 
 const AuthorBlock = styled.div`
   width: 100%;
-  height: 3rem;
+  height: 4rem;
+  margin-top: auto;
+  margin-bottom: auto;
   font-weight: 500;
   font-size: 1rem;
   line-height: 2rem;
@@ -57,6 +59,9 @@ const AuthorBlock = styled.div`
   a:hover {
     filter: brightness(1.2);
   }
+  .about-text {
+    margin-top: 12px;
+  }
 `
 
 const Header = ({ description, siteTitle, location }) => (
@@ -71,12 +76,12 @@ const Header = ({ description, siteTitle, location }) => (
     {location.pathname === "/" ? (
       <AuthorBlock>
         <img src={profilePicture} alt={`Nick Dambrosio`} />
-        <div>
+        <div className="about-text">
           <p className="about">Software Development Blog by Nick Dambrosio</p>
-          <a href="/" className="about">
+          <a href="https://www.twitter.com/iaaafm" className="about">
             Twitter
           </a>
-          <a href="/" className="about">
+          <a href="https://www.github.com/30ozsteak" className="about">
             Github
           </a>
         </div>
