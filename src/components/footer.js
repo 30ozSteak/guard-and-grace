@@ -4,9 +4,13 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const FooterWrapper = styled.footer`
-  color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
+  position: relative;
+  bottom: 0;
+  color: white;
+  left: 0;
+  right: 0;
   text-align: center;
   text-transform: lowercase;
   user-select: none;
@@ -21,7 +25,7 @@ const FooterWrapper = styled.footer`
     filter: brightness(1.2);
   }
 `
-const Footer = ({ authorName, siteUrl, twitter }) => (
+const Footer = ({ authorName, siteUrl }) => (
   <FooterWrapper>
     © {new Date().getFullYear()}{" "}
     <a href="https://www.linkedin.com/in/ndambr/">{authorName}, </a>

@@ -28,6 +28,9 @@ const ThemeProvider = styled.div`
   h2:hover {
     color: #f683b5;
   }
+  em {
+    color: #f783b5;
+  }
 `
 
 const Layout = ({ children, location }) => {

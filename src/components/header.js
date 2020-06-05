@@ -5,11 +5,14 @@ import React from "react"
 import styled from "styled-components"
 
 const HeaderWrapper = styled.div`
+a{
+  text-decoration: none !important;
+}
   .blog-name {
-    text-decoration: none;
+    text-decoration: none !important;
     color: #f683b5;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 2rem !important;
     font-family: Arial, Helvetica, sans-serif;
     transition: 0.2s;
     margin: 0;
@@ -22,8 +25,14 @@ const HeaderWrapper = styled.div`
   .blog-name:hover {
     filter: brightness(1.2);
   }
-  .blog-name.smaller {
+  .blog-name-smaller {
     font-size: 1rem;
+    text-decoration: none !important;
+    color: #f683b5;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.2s;
+    margin: 0;
   }
   a {
     color: #f683b5;
@@ -69,7 +78,7 @@ const Header = ({ description, siteTitle, location }) => (
     <Link
       to="/"
       class="blog-title"
-      className={location.pathname === "/" ? "blog-name" : "blog-name smaller"}
+      className={location.pathname !== "/" ? "blog-name-smaller" : "blog-name"}
     >
       {siteTitle}
     </Link>
@@ -98,7 +107,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: `Complex State`,
+  siteTitle: `Hooks and Hamburgers`,
   siteDescription: `A Software Development blog by Nick Dambrosio`,
 }
 

@@ -1,4 +1,4 @@
-# [Complex State](nick-dambrosio.com/)
+# [Hooks and Hamburgers](nick-dambrosio.com/)
 
 Personal blog. Forked from [Gatsby starter](https://github.com/gatsbyjs/gatsby-starter-blog).
 
