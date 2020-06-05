@@ -7,11 +7,9 @@ import styled from "styled-components"
 const FooterWrapper = styled.footer`
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
-  position: relative;
-  bottom: 0;
+  text-align: center;
   color: white;
-  left: 0;
-  right: 0;
+  margin-top: 1rem;
   user-select: none;
   a {
     color: inherit;
@@ -26,11 +24,14 @@ const FooterWrapper = styled.footer`
 `
 const Footer = ({ authorName, siteUrl }) => (
   <FooterWrapper>
-    <p>© {new Date().getFullYear()} </p>
-    <a href="https://www.linkedin.com/in/ndambr/">{authorName}, </a>
-    built in
-    <a href="https://www.gatsbyjs.org"> Gatsby.js</a>,{" "}
-    <a href={siteUrl}>view source</a>
+    <div>
+      © {new Date().getFullYear()}
+      {"  "}
+      <a href="https://www.linkedin.com/in/ndambr/">{authorName}, </a>
+      built in
+      <a href="https://www.gatsbyjs.org"> Gatsby.js</a>,{" "}
+      <a href={siteUrl}>View Source</a>
+    </div>
   </FooterWrapper>
 )
 
