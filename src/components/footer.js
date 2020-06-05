@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Contact from "./contact"
 
 import styled from "styled-components"
 
@@ -11,8 +12,6 @@ const FooterWrapper = styled.footer`
   color: white;
   left: 0;
   right: 0;
-  text-align: center;
-  text-transform: lowercase;
   user-select: none;
   a {
     color: inherit;
@@ -27,7 +26,7 @@ const FooterWrapper = styled.footer`
 `
 const Footer = ({ authorName, siteUrl }) => (
   <FooterWrapper>
-    © {new Date().getFullYear()}{" "}
+    <p>© {new Date().getFullYear()} </p>
     <a href="https://www.linkedin.com/in/ndambr/">{authorName}, </a>
     built in
     <a href="https://www.gatsbyjs.org"> Gatsby.js</a>,{" "}

@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import Header from "./header"
+import Contact from "./contact"
 import Footer from "./footer"
 import "./layout.css"
 
@@ -57,6 +58,7 @@ const Layout = ({ children, location }) => {
       <div>
         <div>{children}</div>
       </div>
+      <Contact />
       <Footer
         authorName={data.site.siteMetadata.authorName}
         siteUrl={data.site.siteMetadata.siteUrl}
