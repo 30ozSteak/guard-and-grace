@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "hooks-and-hamburgers",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A simple blog for Nick Dambrosio",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Nick Dambrosio <30ozSteak@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.21.37",
@@ -19,7 +19,7 @@
     "gatsby-source-filesystem": "^2.3.8",
     "gatsby-transformer-remark": "^2.8.13",
     "gatsby-transformer-sharp": "^2.5.3",
-    "netlify-cms": "^2.10.49",
+    "netlify-cms-app": "^2.12.14",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
