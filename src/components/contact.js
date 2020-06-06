@@ -19,6 +19,8 @@ const ContactCardWrapper = styled.div`
     }
     .contact-form {
       width: 100% !important;
+      height: 100% !important;
+      min-height: 20rem;
     }
     input {
       width: 90% !important;
@@ -121,9 +123,15 @@ const Contact = () => {
             name="bot-field"
           />
           <input type="text" required={true} placeholder="Name" name="name" />
-          <input type="email" required={true} placeholder="Email" name="name" />
+          <input
+            type="email"
+            required={true}
+            placeholder="Email"
+            name="email"
+          />
           <textarea
             name="message"
+            required={true}
             placeholder="Some Hopes and Dreams"
             id="message"
             row="5"

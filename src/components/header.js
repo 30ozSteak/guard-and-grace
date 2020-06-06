@@ -7,13 +7,14 @@ import styled from "styled-components"
 const HeaderWrapper = styled.div`
 a{
   text-decoration: none !important;
+
 }
   .blog-name {
     text-decoration: none !important;
     color: #f683b5;
     font-weight: 900 !important;
     font-size: 2rem !important;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif !important;
     transition: 0.2s;
     margin: 0;
   }
@@ -77,7 +78,6 @@ const Header = ({ siteTitle, location }) => (
   <HeaderWrapper>
     <Link
       to="/"
-      class="blog-title"
       className={location.pathname !== "/" ? "blog-name-smaller" : "blog-name"}
     >
       {siteTitle}
