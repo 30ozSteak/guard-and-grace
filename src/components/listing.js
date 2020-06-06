@@ -65,8 +65,8 @@ const Listing = () => {
             <p className="date">
               {edge.node.frontmatter.date} - {edge.node.frontmatter.topics}
             </p>
-            {/* <p className="exerpt"> {edge.node.frontmatter.desc}</p>{" "} */}
-            <p className="exerpt">{edge.node.excerpt}</p>
+            <p className="exerpt"> {edge.node.frontmatter.desc}</p>{" "}
+            {/* <p className="exerpt">{edge.node.excerpt}</p> */}
           </Post>
         ))}
       </ul>

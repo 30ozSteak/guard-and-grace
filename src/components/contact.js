@@ -94,19 +94,19 @@ const Contact = () => {
         <form method="post" netlify-honeypot="bot-field" data-netlify="true">
           <input
             type="hidden"
-            required="true"
+            required={true}
             placeholder="hello"
             name="bot-field"
           />
           <input
             type="text"
-            required="true"
+            required={true}
             placeholder="Your Name"
             name="name"
           />
           <input
             type="email"
-            required="true"
+            required={true}
             placeholder="Your Email"
             name="name"
           />

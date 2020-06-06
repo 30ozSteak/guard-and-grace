@@ -11,7 +11,7 @@ a{
   .blog-name {
     text-decoration: none !important;
     color: #f683b5;
-    font-weight: 900;
+    font-weight: 900 !important;
     font-size: 2rem !important;
     font-family: Arial, Helvetica, sans-serif;
     transition: 0.2s;
@@ -73,7 +73,7 @@ const AuthorBlock = styled.div`
   }
 `
 
-const Header = ({ description, siteTitle, location }) => (
+const Header = ({ siteTitle, location }) => (
   <HeaderWrapper>
     <Link
       to="/"
