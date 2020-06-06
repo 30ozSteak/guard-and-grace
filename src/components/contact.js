@@ -115,12 +115,17 @@ const Contact = () => {
         <RiMailSendLine />
       </div>
       <div className="contact-form">
-        <form method="post" netlify-honeypot="bot-field" data-netlify="true">
+        <form
+          method="post"
+          name="my-form"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+        >
           <input
             type="hidden"
             required={true}
             placeholder="hello"
-            name="bot-field"
+            name="my-form"
           />
           <input type="text" required={true} placeholder="Name" name="name" />
           <input
