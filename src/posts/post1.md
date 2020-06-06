@@ -22,7 +22,7 @@ Big yikes. Responsible conference organizers slammed that cancel button overnigh
 
 What happened?
 
-Unfortunately, one of the more important aspects our apps were the conferences they were demo'd in. With the company's model focused on the facilitation of an event, rather than the software, clients were emcouraged to cancel expensive contracts in favor of solutions that were easier to provide to a more broad audience, without the need for gathering in person and creating unnecessary health risks.
+Unfortunately, one of the more important aspects our apps were the conferences they were demo'd in. With the company's model focused on the facilitation of an event, rather than the software, clients were encouraged to cancel expensive contracts in favor of solutions that were easier to provide to a more broad audience, without the need for gathering in person and creating unnecessary health risks.
 
 Thankfully, I had accomplished a whole lot in my first year as a software developer. Being on an agile delivery team that pumped out new and state-of-the-art data-driven simulations every few months was a total blast and gave me a great sense of satisfaction and self-worth. I'm excited and optimistic that these experiences will lead to new opportunities.
 

@@ -10,6 +10,30 @@ const ContactCardWrapper = styled.div`
   color: white;
   align-content: center;
   box-shadow: 0 2px 15px 0 rgba(26, 26, 27, 0.637);
+
+  @media (max-width: 550px) {
+    display: flex;
+    flex-direction: column;
+    .contact-greeting {
+      width: 100% !important;
+    }
+    .contact-form {
+      width: 100% !important;
+    }
+    input {
+      width: 90% !important;
+    }
+    textarea {
+      width: 90% !important;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .contact-greeting {
+      padding: 1rem !important;
+    }
+  }
+
   .contact-greeting {
     padding: 2rem;
     width: 50%;
@@ -52,6 +76,8 @@ const ContactCardWrapper = styled.div`
     width: 70%;
     margin-top: 1rem;
     font-size: 0.8rem;
+    border: none;
+    border-radius: 6px;
   }
   textarea::placeholder {
     padding-left: 5px;
@@ -82,11 +108,7 @@ const Contact = () => {
       <div className="contact-greeting">
         <p>Let's build something beautiful together</p>
         <ul>
-          <li>
-            {" "}
-            I'm pretty good at Fortnite, too. We can team-up for that if you'd
-            like{" "}
-          </li>
+          <li> I'm pretty good at Fortnite, too. We can duo if you'd like. </li>
         </ul>
         <RiMailSendLine />
       </div>
@@ -98,21 +120,11 @@ const Contact = () => {
             placeholder="hello"
             name="bot-field"
           />
-          <input
-            type="text"
-            required={true}
-            placeholder="Your Name"
-            name="name"
-          />
-          <input
-            type="email"
-            required={true}
-            placeholder="Your Email"
-            name="name"
-          />
+          <input type="text" required={true} placeholder="Name" name="name" />
+          <input type="email" required={true} placeholder="Email" name="name" />
           <textarea
             name="message"
-            placeholder="Your Hopes and Dreams"
+            placeholder="Some Hopes and Dreams"
             id="message"
             row="5"
           />
