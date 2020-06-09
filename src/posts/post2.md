@@ -2,7 +2,7 @@
 slug: "/hello-world"
 date: "2020-03-27"
 title: "Hello World"
-desc: "Pandemic Update"
+desc: "This is a story of how I lost my first dev job."
 topics: "Life"
 ---
 
