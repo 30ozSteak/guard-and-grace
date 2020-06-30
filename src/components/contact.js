@@ -64,7 +64,7 @@ const ContactCardWrapper = styled.div`
     border-radius: 4px;
     border: none;
     color: black;
-    width: 70%;
+    width: 80%;
     margin-top: 1rem;
     font-size: 0.8rem;
     padding: 0.5rem 1rem;
@@ -75,7 +75,7 @@ const ContactCardWrapper = styled.div`
   textarea {
     resize: none;
     padding: 0.5rem 0.7rem;
-    width: 70%;
+    width: 80%;
     margin-top: 1rem;
     font-size: 0.8rem;
     border: none;
@@ -121,8 +121,9 @@ const Contact = () => {
           netlify-honeypot="bot-field"
           data-netlify="true"
         >
-          <input type="hidden" name="form-name" value="contact" />
-
+          <p class="hidden">
+            <input type="hidden" name="bot-field" value="contact" />
+          </p>
           <input type="text" required={true} placeholder="Name" name="name" />
           <input
             type="email"
