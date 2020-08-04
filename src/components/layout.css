@@ -99,6 +99,16 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
+pre {
+  border: 1px solid white;
+  border-radius: 25px;
+}
+
+code {
+  border-radius: 0.3em !important;
+  background-color: #3e4553 !important;
+  padding: 0.15em 0.2em 0.05em !important;
+}
 figure {
   margin: 1em 40px;
 }

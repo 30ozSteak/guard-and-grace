@@ -10,11 +10,11 @@ const LISTING_QUERY = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 75)
+          id
           frontmatter {
-            date(formatString: "MM DD 'YY")
             title
             slug
+            date
             desc
             topics
           }

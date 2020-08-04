@@ -17,7 +17,7 @@ const ThemeProvider = styled.div`
     margin: 0;
     padding: 0;
   }
-  max-width: 35rem;
+  max-width: 40rem;
   justify-content: center;
   margin: 1rem auto;
   margin-bottom: 0;
@@ -31,6 +31,12 @@ const ThemeProvider = styled.div`
   }
   em {
     color: #f783b5;
+  }
+  a {
+    color: #f783b5;
+  }
+  hr {
+    background-color: white;
   }
 `
 
