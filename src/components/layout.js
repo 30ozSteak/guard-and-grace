@@ -18,8 +18,7 @@ const ThemeProvider = styled.div`
     padding: 0;
   }
   max-width: 40rem;
-  justify-content: center;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
   margin-bottom: 0;
 
   h2 {
@@ -64,7 +63,7 @@ const Layout = ({ children, location }) => {
       <div>
         <div>{children}</div>
       </div>
-      <Contact />
+
       <Footer
         authorName={data.site.siteMetadata.authorName}
         siteUrl={data.site.siteMetadata.siteUrl}

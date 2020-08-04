@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "./layout"
+import Contact from "./contact"
 
 const postLayout = props => {
   const { markdownRemark } = props.data
@@ -16,6 +17,7 @@ const postLayout = props => {
           __html: markdownRemark.html,
         }}
       />
+      <Contact />
     </Layout>
   )
 }

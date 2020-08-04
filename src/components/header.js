@@ -5,6 +5,9 @@ import React from "react"
 import styled from "styled-components"
 
 const HeaderWrapper = styled.div`
+padding: 1rem 0;
+border-bottom: 1px solid white;
+
 a{
   text-decoration: none !important;
 
@@ -16,11 +19,10 @@ a{
     font-size: 2rem !important;
     font-family: Arial, Helvetica, sans-serif !important;
     transition: 0.2s;
-    margin: 0;
   }
   p {
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.3rem;
+    line-height: 1.5rem;
     margin auto 0;
   }
   .blog-name:hover {
@@ -43,26 +45,22 @@ a{
 const AuthorBlock = styled.div`
   width: 100%;
   height: 4rem;
-  margin-top: auto;
-  margin-bottom: auto;
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 2rem;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin: 2rem 0;
   display: flex;
   img {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    margin-right: 3rem;
   }
   p {
     color: white;
-    margin-left: 1rem;
     margin-bottom: 0;
   }
   a {
-    margin-left: 1rem;
+    margin-right: 1rem;
     font-size: 1rem;
     transition: 0.2s;
   }

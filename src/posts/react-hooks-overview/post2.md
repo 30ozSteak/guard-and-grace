@@ -1,7 +1,7 @@
 ---
 slug: "/react-hooks-overview"
 date: "2019-04-1"
-title: "React Hooks Overview"
+title: "React Hooks"
 desc: "Understanding hooks and how we got here"
 topics: "React Hooks"
 ---
