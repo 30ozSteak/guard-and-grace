@@ -6,7 +6,6 @@ const ContactCardWrapper = styled.div`
   border: 1px solid transparent;
   border-radius: 6px;
   display: flex;
-  font-family: Arial, Helvetica, sans-serif;
   color: white;
   align-content: center;
   box-shadow: 0 2px 15px 0 rgba(26, 26, 27, 0.637);
@@ -49,7 +48,7 @@ const ContactCardWrapper = styled.div`
   svg {
     font-size: 2rem;
     transition: 0.2s;
-    color: #f683b5;
+    color: #ff0b77;
   }
   li {
     list-style-type: none;
@@ -95,7 +94,7 @@ const ContactCardWrapper = styled.div`
     border: none;
     padding: 0.5rem 1rem;
     transition: 0.2s;
-    background-color: #f683b5;
+    background-color: #ff0b77;
   }
   button:hover {
     filter: brightness(1.1);

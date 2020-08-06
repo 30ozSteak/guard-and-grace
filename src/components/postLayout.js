@@ -2,25 +2,35 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "./layout"
 import Contact from "./contact"
+import styled from "styled-components"
 
 const postLayout = props => {
   const { markdownRemark } = props.data
   return (
     <Layout location={props.location}>
-      <h1 style={{ color: "white", marginTop: "3rem", marginBottom: "0" }}>
-        {markdownRemark.frontmatter.title}
-      </h1>
-      <p style={{ color: "lightgray" }}>{markdownRemark.frontmatter.date}</p>
-      <p
-        style={{ color: "white", fontSize: "1.2rem", lineHeight: "2rem" }}
-        dangerouslySetInnerHTML={{
-          __html: markdownRemark.html,
-        }}
-      />
+      <BlogPost>
+        <h1>{markdownRemark.frontmatter.title}</h1>
+        <p>{markdownRemark.frontmatter.date}</p>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: markdownRemark.html,
+          }}
+        />
+      </BlogPost>
       <Contact />
     </Layout>
   )
 }
+
+const BlogPost = styled.ul`
+  h1 {
+    color: white;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+`
 
 export const query = graphql`
   query PostQuery($slug: String!) {

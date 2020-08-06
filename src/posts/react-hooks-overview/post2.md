@@ -1,16 +1,10 @@
 ---
 slug: "/react-hooks-overview"
-date: "2019-04-1"
+date: "2020-06-1"
 title: "React Hooks"
 desc: "Understanding hooks and how we got here"
 topics: "React Hooks"
 ---
-
-[Part 1: React Hooks Overview](https://repl.it/@imsteaky/Counter#src/App.js)
-
----
-
-## Where are we?
 
 At React Conf 2018, the React team presented the [Hooks Proposal](https://reactjs.org/docs/hooks-intro.html). A new addition to React as of 16.8 and allows you to split a component into smaller functions based on which pieces are related. This results in smaller, faster, easier to understand code.
 

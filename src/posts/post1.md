@@ -1,8 +1,8 @@
 ---
 slug: "/hello-world"
 date: "2020-03-27"
-title: "Hello World"
-desc: "Pandemic Update"
+title: "Pandemic Update"
+desc: "Development during the apocalypse"
 topics: "Life"
 ---
 

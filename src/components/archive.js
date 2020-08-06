@@ -24,11 +24,16 @@ const ArchiveList = styled.ul`
   padding: 0;
   margin: 0;
   list-style-type: none;
-  font-family: Arial, Helvetica, sans-serif;
+
+  h3{
+    color: #817dff !important;
+
+    text-transform: uppercase;
+    font-size: 1rem !important;
+  }
 
   a {
-    text-decoration: none;
-    color: black;
+      text-decoration: none;
       text-transform: uppercase;
       font-size: 0.7rem;
       border-bottom: 1.5px solid transparent;
@@ -37,7 +42,7 @@ const ArchiveList = styled.ul`
       color: #524763;
     }
     a:hover {
-      border-bottom: 1.5px solid #524763;
+      border-bottom: 1.5px solid white;
     }
   }
 `
@@ -47,8 +52,8 @@ const Archive = () => {
 
   return (
     <aside>
-      <h3>Archive</h3>
       <ArchiveList>
+        <h3>Popular Content</h3>
         {data.allMarkdownRemark.edges.map(edge => (
           <li key={edge.node.frontmatter.slug}>
             <Link to={`/posts${edge.node.frontmatter.slug}`}>

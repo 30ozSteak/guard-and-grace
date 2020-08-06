@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Hooks and Hamburgers`,
+    title: `Nick Dambrosio`,
     description: `A Software Development blog by Nick Dambrosio`,
     author: `@iaaafm`,
     authorName: "Nick Dambrosio",
     siteUrl: `https://www.nick-dambrosio.com`,
+    repository: `https://github.com/30ozSteak/guard-and-grace`,
   },
   plugins: [
     `gatsby-plugin-sharp`,

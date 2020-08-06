@@ -4,8 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import Header from "./header"
-import Contact from "./contact"
 import Footer from "./footer"
+import Archive from "./archive"
 import "./layout.css"
 
 const ThemeProvider = styled.div`
@@ -17,25 +17,44 @@ const ThemeProvider = styled.div`
     margin: 0;
     padding: 0;
   }
-  max-width: 40rem;
+  max-width: 60rem;
   margin: 0.5rem auto;
   margin-bottom: 0;
 
   h2 {
     transition: 0.2s;
-    font-size: 1.8rem;
   }
   h2:hover {
-    color: #f683b5;
+    color: #ff0b77;
   }
   em {
-    color: #f783b5;
+    color: #ff0b77;
   }
   a {
-    color: #f783b5;
+    color: #ff0b77;
   }
   hr {
     background-color: white;
+  }
+  p {
+    color: white;
+  }
+
+  .recent-articles {
+    letter-spacing: 1px;
+    font-size: 1rem;
+  }
+
+  .listing {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5rem;
+  }
+
+  .post {
+    display: flex;
+    margin: auto;
+    padding: 1rem;
   }
 `
 
@@ -48,6 +67,7 @@ const Layout = ({ children, location }) => {
           description
           siteUrl
           authorName
+          repository
         }
       }
     }
@@ -60,13 +80,15 @@ const Layout = ({ children, location }) => {
         location={location}
         siteTitle={data.site.siteMetadata.title}
       />
-      <div>
+      <div className={location.pathname === "/" ? "listing" : "post"}>
         <div>{children}</div>
+
+        {location.pathname === "/" ? <Archive /> : <div />}
       </div>
 
       <Footer
         authorName={data.site.siteMetadata.authorName}
-        siteUrl={data.site.siteMetadata.siteUrl}
+        repository={data.site.siteMetadata.repository}
       />
     </ThemeProvider>
   )

@@ -11,6 +11,8 @@ const LISTING_QUERY = graphql`
       edges {
         node {
           id
+          excerpt(pruneLength: 250)
+
           frontmatter {
             title
             slug
@@ -25,29 +27,47 @@ const LISTING_QUERY = graphql`
 `
 
 const Post = styled.article`
-  margin: 3rem 0;
-  a {
-    text-decoration: none;
-    color: white;
+  margin-bottom: 4rem;
+  :hover h2 {
+    color: #ff0b77;
   }
-  a:hover {
-    color: #f683b5;
+
+  .read-more:hover {
+    color: #ff0b77;
+    transition: 0.2s;
   }
-  p.date {
-    font-size: 0.8rem;
-    color: #d3d3d3;
-    margin-bottom: 0;
-  }
-  p.exerpt {
-    font-size: 1rem;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+
   h2 {
-    margin-bottom: 0;
     color: white;
-    font-weight: 900;
-    font-size: 1.9rem;
+    letter-spacing: 0.5px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.2s;
+    font-size: 24px;
+  }
+
+  .description {
+    color: #9c97ad;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .exerpt {
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+  }
+
+  .read-more {
+    font-size: 0.9rem !important;
+    margin: 0;
+    font-weight: 600;
   }
 `
 
@@ -57,17 +77,19 @@ const Listing = () => {
   return (
     <div>
       <ul>
+        <p className="recent-heading">Recently Published</p>
+
         {data.allMarkdownRemark.edges.map(edge => (
-          <Post key={edge.node.frontmatter.slug}>
-            <Link to={`/posts${edge.node.frontmatter.slug}`}>
+          <Link to={`/posts${edge.node.frontmatter.slug}`}>
+            <Post key={edge.node.frontmatter.slug}>
               <h2>{edge.node.frontmatter.title}</h2>
-            </Link>
-            <p className="date">
-              {edge.node.frontmatter.date} - {edge.node.frontmatter.topics}
-            </p>
-            <p className="exerpt"> {edge.node.frontmatter.desc}</p>{" "}
-            {/* <p className="exerpt">{edge.node.excerpt}</p> */}
-          </Post>
+              <p className="description"> {edge.node.frontmatter.desc}</p>
+
+              <p className="exerpt">{edge.node.excerpt}</p>
+
+              <p className="read-more">Read More</p>
+            </Post>
+          </Link>
         ))}
       </ul>
     </div>
