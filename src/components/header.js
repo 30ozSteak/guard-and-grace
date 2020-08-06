@@ -34,12 +34,6 @@ const AuthorBlock = styled.div`
 
   display: flex;
   align-items: center;
-  img {
-    width: 5rem;
-    height: 5rem;
-    margin-right: 3rem;
-    border-radius: 50%;
-  }
   p {
     color: white;
     margin-bottom: 0;
@@ -56,10 +50,7 @@ const AuthorBlock = styled.div`
 
 const Header = ({ siteTitle, location }) => (
   <HeaderWrapper>
-    <Link
-      to="/"
-      className={location.pathname !== "/" ? "blog-name-smaller" : "blog-name"}
-    >
+    <Link to="/" className="blog-name">
       {siteTitle}
     </Link>
     {location.pathname === "/" ? (

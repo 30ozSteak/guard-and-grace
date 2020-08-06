@@ -10,7 +10,6 @@ const postLayout = props => {
     <Layout location={props.location}>
       <BlogPost>
         <h1>{markdownRemark.frontmatter.title}</h1>
-        <p>{markdownRemark.frontmatter.date}</p>
         <p
           dangerouslySetInnerHTML={{
             __html: markdownRemark.html,
@@ -25,6 +24,8 @@ const postLayout = props => {
 const BlogPost = styled.ul`
   h1 {
     color: white;
+    margin: 0;
+    margin-bottom: 15rem;
   }
 
   a:hover {

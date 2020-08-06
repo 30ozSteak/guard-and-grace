@@ -104,15 +104,19 @@ samp {
   font-size: 1em;
 }
 pre {
-  border: 1px solid white;
-  border-radius: 25px;
+  background-color: rgba(39, 47, 56, 0.849) !important;
+}
+
+pre > code {
+  background-color: none !important;
 }
 
 code {
   border-radius: 0.3em !important;
-  background-color: #3e4553 !important;
   padding: 0.15em 0.2em 0.05em !important;
+  background-color: #3e4553;
 }
+
 figure {
   margin: 1em 40px;
 }
@@ -606,17 +610,18 @@ td:last-child {
 }
 tt,
 code {
-  background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+  padding: 0.2rem !important;
+}
+
+@media (max-width: 600px) {
 }
 pre code {
   background: none;
   line-height: 1.42;
+  margin: 0;
 }
 code:before,
 code:after,

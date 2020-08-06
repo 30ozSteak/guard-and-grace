@@ -13,19 +13,9 @@ const ContactCardWrapper = styled.div`
   @media (max-width: 550px) {
     display: flex;
     flex-direction: column;
-    .contact-greeting {
-      width: 100% !important;
-    }
+
     .contact-form {
-      width: 100% !important;
-      height: 100% !important;
       min-height: 20rem;
-    }
-    input {
-      width: 90% !important;
-    }
-    textarea {
-      width: 90% !important;
     }
   }
 
@@ -37,7 +27,6 @@ const ContactCardWrapper = styled.div`
 
   .contact-greeting {
     padding: 2rem;
-    width: 50%;
     background-color: rgba(255, 255, 255, 0.089);
     padding-top: 4rem;
   }
@@ -56,7 +45,6 @@ const ContactCardWrapper = styled.div`
     font-size: 0.8rem;
   }
   .contact-form {
-    width: 50%;
     text-align: center;
   }
   input {
@@ -107,11 +95,7 @@ const Contact = () => {
   return (
     <ContactCardWrapper>
       <div className="contact-greeting">
-        <p>Let's build something beautiful together</p>
-        <ul>
-          <li> I'm pretty good at Fortnite, too. We can duo if you'd like. </li>
-        </ul>
-        <RiMailSendLine />
+        <p>Be the first to know when I post new articles!</p>
       </div>
       <div className="contact-form">
         <form
@@ -129,13 +113,6 @@ const Contact = () => {
             required={true}
             placeholder="Email"
             name="email"
-          />
-          <textarea
-            name="message"
-            required={true}
-            placeholder="Some Hopes and Dreams"
-            id="message"
-            row="5"
           />
           <button type="submit">Send</button>
           {/* <input type="reset" value="Clear" /> */}

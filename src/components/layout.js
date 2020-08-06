@@ -9,7 +9,11 @@ import Archive from "./archive"
 import "./layout.css"
 
 const ThemeProvider = styled.div`
-  padding: 1rem;
+  padding: 0 15vw;
+  @media (max-width: 700px) {
+    padding: 4vw !important;
+  }
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,9 +21,11 @@ const ThemeProvider = styled.div`
     margin: 0;
     padding: 0;
   }
-  max-width: 60rem;
-  margin: 0.5rem auto;
-  margin-bottom: 0;
+
+  li {
+    padding: 1rem;
+    margin: 0 1rem;
+  }
 
   h2 {
     transition: 0.2s;
@@ -51,10 +57,27 @@ const ThemeProvider = styled.div`
     gap: 5rem;
   }
 
+  @media (max-width: 700px) {
+    .listing {
+      display: block;
+    }
+  }
+
   .post {
     display: flex;
     margin: auto;
-    padding: 1rem;
+  }
+
+  @media (max-width: 700px) {
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      margin: 0;
+    }
+
+    pre code {
+      font-size: 3vw;
+    }
   }
 `
 

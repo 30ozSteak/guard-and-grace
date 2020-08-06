@@ -21,6 +21,9 @@ const POST_ARCHIVE_QUERY = graphql`
 `
 
 const ArchiveList = styled.ul`
+@media (max-width: 700px) {
+  display: none;
+}
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -44,6 +47,7 @@ const ArchiveList = styled.ul`
     a:hover {
       border-bottom: 1.5px solid white;
     }
+    
   }
 `
 
