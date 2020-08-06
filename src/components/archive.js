@@ -21,6 +21,11 @@ const POST_ARCHIVE_QUERY = graphql`
 `
 
 const ArchiveList = styled.ul`
+li {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 @media (max-width: 700px) {
   display: none;
 }
