@@ -4,7 +4,8 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const FooterWrapper = styled.footer`
-  font-size: 0.8rem;
+  font-size: 1rem;
+  padding: 1rem 0;
   text-align: center;
   color: white;
   margin-top: 1rem;
@@ -27,6 +28,7 @@ const Footer = ({ authorName, repository }) => (
       built in
       <a href="https://www.gatsbyjs.org"> Gatsby.js</a>,{" "}
       <a href={repository}>View Source</a>
+      <div></div>
     </div>
   </FooterWrapper>
 )

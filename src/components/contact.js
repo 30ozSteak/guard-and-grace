@@ -1,80 +1,49 @@
-import React from "react"
+import React, { useState } from "react"
+import { navigate } from "gatsby-link"
 import styled from "styled-components"
-import { RiMailSendLine } from "react-icons/ri"
 
 const ContactCardWrapper = styled.div`
-  border: 1px solid transparent;
+  border: 1px solid gray;
   border-radius: 6px;
   display: flex;
+  width: 100%;
+  max-width: 50rem;
+  align-items: center;
   color: white;
-  align-content: center;
   box-shadow: 0 2px 15px 0 rgba(26, 26, 27, 0.637);
 
-  @media (max-width: 550px) {
-    display: flex;
-    flex-direction: column;
-
-    .contact-form {
-      min-height: 20rem;
-    }
-  }
-
-  @media (max-width: 350px) {
-    .contact-greeting {
-      padding: 1rem !important;
-    }
-  }
-
   .contact-greeting {
+    width: 50%;
     padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.089);
-    padding-top: 4rem;
   }
-  p {
-    font-size: 1.2rem;
-    font-weight: 900;
-  }
-  svg {
-    font-size: 2rem;
-    transition: 0.2s;
-    color: #ff0b77;
-  }
-  li {
-    list-style-type: none;
-    line-height: 1rem;
-    font-size: 0.8rem;
-  }
+
   .contact-form {
-    text-align: center;
+    padding: 2rem;
+    width: 50%;
+    margin: auto;
   }
-  input {
-    border-radius: 4px;
+
+  .contact-form input {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 5px;
     border: none;
-    color: black;
-    width: 80%;
-    margin-top: 1rem;
-    font-size: 0.8rem;
-    padding: 0.5rem 1rem;
+    width: 100%;
   }
-  input::placeholder {
-    color: black;
-  }
+
   textarea {
-    resize: none;
-    padding: 0.5rem 0.7rem;
-    width: 80%;
-    margin-top: 1rem;
-    font-size: 0.8rem;
-    border: none;
-    border-radius: 6px;
+    display: block;
+    width: 100%;
   }
-  textarea::placeholder {
-    padding-left: 5px;
+
+  label {
+    font-size: 0.7rem;
   }
+
   button {
     margin: 1rem auto;
     display: block;
-    width: 50%;
+    width: 100%;
     border-radius: 30px;
     cursor: pointer;
     font-size: 1.2rem;
@@ -85,41 +54,99 @@ const ContactCardWrapper = styled.div`
     background-color: #ff0b77;
   }
   button:hover {
-    filter: brightness(1.1);
+    filter: brightness(1.3);
   }
-  form:first-of-type {
-    margin-top: 2rem;
+
+  @media (max-width: 700px) {
+    display: block;
+    padding: 0;
+    .contact-greeting {
+      width: 100%;
+      text-align: center;
+    }
+
+    .contact-form {
+      width: 100%;
+      margin: auto;
+    }
+    input {
+      min-width: 5rem;
+      width: 100% !important;
+    }
   }
 `
-const Contact = () => {
+export default function Contact() {
+  const [value, setValue] = useState({})
+
+  const handleChange = e => {
+    setValue({ ...value, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const form = e
+      .targetfetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodeURI({
+          "form-name": form.getAttribute("name"),
+          ...value,
+        }),
+      })
+      .then(() => navigate(form.getAttribute("action")))
+      .catch(error => alert(error))
+  }
+
   return (
     <ContactCardWrapper>
       <div className="contact-greeting">
-        <p>Be the first to know when I post new articles!</p>
+        <h2>Interested in Development, but not sure how to start?</h2>
+        <p>
+          I'm always open for mentorship! <br />
+          Let's come up with a plan for learning something new.
+        </p>
       </div>
       <div className="contact-form">
         <form
-          method="post"
           name="contact"
-          netlify-honeypot="bot-field"
+          method="post"
+          action="/thanks/"
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
         >
-          <p class="hidden">
-            <input type="hidden" name="bot-field" value="contact" />
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>
+              Don’t fill this out:{" "}
+              <input name="bot-field" onChange={handleChange} />
+            </label>
           </p>
-          <input type="text" required={true} placeholder="Name" name="name" />
-          <input
-            type="email"
-            required={true}
-            placeholder="Email"
-            name="email"
-          />
-          <button type="submit">Send</button>
-          {/* <input type="reset" value="Clear" /> */}
+          <p>
+            <label>
+              Your name:
+              <input type="text" name="name" onChange={handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your email:
+              <input type="email" name="email" onChange={handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              Message:
+              <textarea name="message" onChange={handleChange} />
+            </label>
+          </p>
+          <p>
+            <button className="button" type="submit">
+              Send
+            </button>
+          </p>
         </form>
       </div>
     </ContactCardWrapper>
   )
 }
-
-export default Contact

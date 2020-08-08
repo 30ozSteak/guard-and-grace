@@ -105,6 +105,7 @@ samp {
 }
 pre {
   background-color: rgba(39, 47, 56, 0.849) !important;
+  margin: 3rem 0 !important;
 }
 
 pre > code {

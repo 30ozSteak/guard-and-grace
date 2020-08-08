@@ -9,7 +9,11 @@ const postLayout = props => {
   return (
     <Layout location={props.location}>
       <BlogPost>
-        <h1>{markdownRemark.frontmatter.title}</h1>
+        <div className="title-block">
+          <p>{markdownRemark.frontmatter.topics}</p>
+          <h1>{markdownRemark.frontmatter.title}</h1>
+        </div>
+
         <p
           dangerouslySetInnerHTML={{
             __html: markdownRemark.html,
@@ -22,9 +26,18 @@ const postLayout = props => {
 }
 
 const BlogPost = styled.ul`
-  h1 {
+  max-width: 50rem;
+  .title-block h1 {
     color: white;
-    margin: 0;
+  }
+
+  .title-block p {
+    margin-bottom: 0;
+    color: #ff0b77;
+  }
+
+  .title-block {
+    text-align: center;
     margin-bottom: 15rem;
   }
 
@@ -39,6 +52,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        topics
         date
         slug
       }

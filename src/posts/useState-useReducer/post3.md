@@ -1,22 +1,18 @@
 ---
-slug: "/react-hooks-overview"
-date: "2020-06-1"
-title: "React Hooks"
-desc: "Understanding hooks and how we got here"
+slug: "/useState-useReducer"
+date: "2020-06-3"
+title: "Managing state with useReducer"
+desc: "With multiple solutions to different scenarios "
 topics: "React Hooks"
 ---
 
-At React Conf 2018, the React team presented the [Hooks Proposal](https://reactjs.org/docs/hooks-intro.html). A new addition to React as of 16.8 and allows you to split a component into smaller functions based on which pieces are related. This results in smaller, faster, easier to understand code.
+Hooks are _rad_. I'm a big fan.
 
-[Watch on Youtube: React Conf 2018](https://www.youtube.com/watch?v=dpw9EHDh2bM)
+Last time we learned about React Hooks and why they've been introduced, then we refactored a react component built as a Class into a function component using hooks, allowing us to share logic between components. Today we're going to look at managing state with useState and useReducer.
 
-I was a student at [Turing School of Software and Design](https://turing.io/) about to finish my run of the program. Eager to explore new technologies I fully embraced hooks (along with anything else Dan Abramov said), and moved away from class based components. Since then I've found that my code is a lot easier to understand, easier to debug, more importantly, more _fun_ to write.
+<!-- [Watch on Youtube: React Conf 2018](https://www.youtube.com/watch?v=dpw9EHDh2bM) -->
 
-I recommend visiting the [React Hooks Documentation](https://reactjs.org/docs/hooks-state.html) and starting your React journey there. This post will briefly cover the how and why for React Hooks and will assume you understand some basic concepts like [state](https://reactjs.org/docs/faq-state.html). We'll compare a Class-based component to a new functional one with hooks, as well as examples of _built-in_ hooks that are already provided to us.
-
-We'll take a look at `useState` and `useEffect`, I'll do a deeper dive into each of these and then we'll get into _custom hooks_ for when we want to share logic between two Javascript functions, _next time_.
-
-## Why Hooks?
+## I too am afraid of State
 
 - Hooks allow you to use local state and other React features without writing a class.
 
@@ -24,9 +20,7 @@ We'll take a look at `useState` and `useEffect`, I'll do a deeper dive into each
 
 <br/>
 
-This gif from [twitter](https://twitter.com/prchdk/status/1056960391543062528) does a wonderful job at demonstrating the benefits of hooks
-
-## ![React Hooks Demonstration](https://miro.medium.com/max/660/1*6vYH5ogk15XrMHAieRf4TA.gif)
+---
 
 ## Why are we here?
 
@@ -222,12 +216,6 @@ export default Counter
 ### We just extracted data from our function component and turned it into a react hook that can be used anywhere in our application!
 
 ---
-
-## Rules of Hooks
-
-- Only call hooks at the top level: Don't call them inside of loops, conditionals, or nested functions
-
-- Only call hooks from React Functional Components: Don't call them inside regular JS functions, or a React Class based component
 
 ## Conclusion
 
