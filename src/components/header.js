@@ -5,9 +5,10 @@ import React from "react"
 import styled from "styled-components"
 
 const HeaderWrapper = styled.div`
+  height: 48px;
+  margin: 2rem 0;
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
   align-items: center;
 
   .blog-name {
@@ -27,10 +28,14 @@ const HeaderWrapper = styled.div`
   }
 
   svg {
-    font-size: 24px;
-    color: white;
-    margin: 0.5rem;
+    color: #9c97ad;
+    transition: 0.1s;
   }
+
+  svg:hover {
+    color: white;
+  }
+
   a {
     font-size: 24px;
     line-height: 24px;
@@ -45,7 +50,7 @@ const Header = ({ siteTitle, location }) => (
     >
       {siteTitle}
     </Link>
-    {location.pathname === "/" && <Socials />}
+    <div>{location.pathname === "/" && <Socials />}</div>
   </HeaderWrapper>
 )
 
