@@ -651,13 +651,20 @@ pre tt:after {
 }
 
 .social-links {
-  display: flex;
+  margin-left: 2rem;
+}
+
+@media (max-width: 700px) {
+  .social-links {
+    transition: 0.2s;
+  }
+
+  .social-links a {
+    margin-right: 0.5rem;
+  }
 }
 
 .social-links a {
   color: #9c97ad;
-}
-
-.social-links svg {
-  margin: 0 1rem;
+  margin-right: 1rem;
 }

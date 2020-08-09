@@ -5,10 +5,10 @@ import React from "react"
 import styled from "styled-components"
 
 const HeaderWrapper = styled.div`
-  height: 48px;
-  margin: 2rem 0;
   display: flex;
   justify-content: space-between;
+  height: 48px;
+  margin: 2rem 0;
   align-items: center;
 
   .blog-name {
