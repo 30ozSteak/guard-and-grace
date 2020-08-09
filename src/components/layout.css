@@ -650,21 +650,21 @@ pre tt:after {
   font-size: 1rem !important;
 }
 
-.social-links {
+.connect-links {
   margin-left: 2rem;
 }
 
 @media (max-width: 700px) {
-  .social-links {
+  .connect-links {
     transition: 0.2s;
   }
 
-  .social-links a {
+  .connect-links a {
     margin-right: 0.5rem;
   }
 }
 
-.social-links a {
+.connect-links a {
   color: #9c97ad;
   margin-right: 1rem;
 }

@@ -50,7 +50,7 @@ const Header = ({ siteTitle, location }) => (
     >
       {siteTitle}
     </Link>
-    <div>{location.pathname === "/" && <Socials />}</div>
+    {location.pathname === "/" && <Socials />}
   </HeaderWrapper>
 )
 

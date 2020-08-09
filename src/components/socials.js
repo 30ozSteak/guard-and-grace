@@ -6,7 +6,7 @@ import twitterOutlined from "@iconify/icons-ant-design/twitter-outlined"
 
 const Socials = () => {
   return (
-    <div className="social-links">
+    <div className="connect-links">
       <a href="https://ko-fi.com/Y8Y6213IA">
         <Icon icon={koFi} />
       </a>
