@@ -14,6 +14,8 @@ const FooterWrapper = styled.footer`
     color: #ff0b77;
     text-decoration: none;
     transition: 0.2s;
+    font-weight: 300;
+    letter-spacing: 1px;
   }
   a:hover {
     filter: brightness(1.2);
@@ -25,7 +27,7 @@ const Footer = ({ authorName, repository }) => (
       © {new Date().getFullYear()}
       {"  "}
       <a href="https://www.linkedin.com/in/ndambr/">{authorName}, </a>
-      built in
+      built with
       <a href="https://www.gatsbyjs.org"> Gatsby.js</a>,{" "}
       <a href={repository}>View Source</a>
       <div></div>

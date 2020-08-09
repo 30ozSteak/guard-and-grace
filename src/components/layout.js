@@ -55,6 +55,7 @@ const ThemeProvider = styled.div`
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 5rem;
+    margin-top: 10rem;
   }
 
   @media (max-width: 700px) {
@@ -66,6 +67,7 @@ const ThemeProvider = styled.div`
   .post {
     display: flex;
     margin: auto;
+    margin-top: 4rem;
   }
 
   @media (max-width: 700px) {

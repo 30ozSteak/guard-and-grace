@@ -3,7 +3,7 @@ module.exports = {
     title: `Nick Dambrosio`,
     description: `A Software Development blog by Nick Dambrosio`,
     author: `@iaaafm`,
-    authorName: "Nick Dambrosio dot com",
+    authorName: "Nick Dambrosio",
     siteUrl: `https://www.nick-dambrosio.com`,
     repository: `https://github.com/30ozSteak/guard-and-grace`,
   },
