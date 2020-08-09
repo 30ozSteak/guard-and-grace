@@ -45,12 +45,12 @@ li {
       text-transform: uppercase;
       font-size: 0.7rem;
       border-bottom: 1.5px solid transparent;
-      transition: 0.1s;
+      transition: 0.2s;
       padding-bottom: 0.2rem;
       color: #524763;
     }
     a:hover {
-      border-bottom: 1.5px solid white;
+      color: white;
     }
     
   }

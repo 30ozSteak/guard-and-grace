@@ -1,10 +1,14 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import Button from "./button"
 import React from "react"
 import styled from "styled-components"
 
 const HeaderWrapper = styled.div`
   margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 2rem 0;
   font-family: Arial, Helvetica, sans-serif;
 
@@ -27,10 +31,34 @@ const HeaderWrapper = styled.div`
   }
 `
 
-const AuthorBlock = styled.div`
+const SiteNav = styled.div`
   font-weight: 500;
-  font-size: 1rem;
-  margin: 2rem 0;
+  font-size: 24px !important;
+
+  margin: 0.8rem 0;
+  margin-left: 5rem;
+  ul {
+    color: #9c97ad;
+    font-weight: 600;
+    list-style-type: none;
+    display: flex;
+    user-select: none;
+    font-size: 0.9rem;
+  }
+
+  li {
+    margin: 0 !important;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  li:hover {
+    color: white;
+  }
+
+  li:active {
+    color: #ff0b77;
+  }
 
   display: flex;
   align-items: center;
@@ -54,9 +82,9 @@ const Header = ({ siteTitle, location }) => (
       {siteTitle}
     </Link>
     {location.pathname === "/" ? (
-      <AuthorBlock>
-        <div className="about-text"></div>
-      </AuthorBlock>
+      <SiteNav>
+        <Button />
+      </SiteNav>
     ) : (
       <div />
     )}
@@ -69,7 +97,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: `Hooks and Hamburgers`,
+  siteTitle: `Nick Dambrosio Dot Com`,
   siteDescription: `A Software Development blog by Nick Dambrosio`,
 }
 
