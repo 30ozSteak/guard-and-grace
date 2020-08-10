@@ -615,6 +615,7 @@ code {
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
   padding: 0.2rem !important;
+  margin-right: 5px;
 }
 
 @media (max-width: 600px) {

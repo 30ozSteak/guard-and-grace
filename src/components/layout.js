@@ -79,6 +79,7 @@ const ThemeProvider = styled.div`
 
     pre code {
       font-size: 3vw;
+      padding: 0 !important;
     }
   }
 `
