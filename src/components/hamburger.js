@@ -27,7 +27,7 @@ const Hamburger = ({ isNavOpen, toggleNavOpen }) => {
   return (
     <button onClick={toggleNavOpen}>
       <animated.svg
-        width="25"
+        width="35"
         height="58"
         viewBox="0 0 44 41"
         fill={color}

@@ -657,11 +657,7 @@ pre tt:after {
 
 @media (max-width: 700px) {
   .connect-links {
-    transition: 0.2s;
-  }
-
-  .connect-links a {
-    margin-right: 0.5rem;
+    display: none;
   }
 }
 

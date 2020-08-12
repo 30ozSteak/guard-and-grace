@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import Hamburger from "./hamburger"
 import Socials from "./socials"
 import React, { useState } from "react"
-import "../Styles/Header.css"
+import "../styles/Header.css"
 
 const Header = ({ siteTitle, location }) => {
   const [isNavOpen, setNavOpen] = useState(false)
@@ -31,8 +31,10 @@ const Header = ({ siteTitle, location }) => {
           <div />
         )}
       </div>
-      {/* {location.pathname === "/" && <Socials />} */}
-      <Hamburger isNavOpen={isNavOpen} toggleNavOpen={toggleNavOpen} />
+      <div>
+        {location.pathname === "/" && <Socials />}
+        <Hamburger isNavOpen={isNavOpen} toggleNavOpen={toggleNavOpen} />
+      </div>
     </div>
   )
 }
