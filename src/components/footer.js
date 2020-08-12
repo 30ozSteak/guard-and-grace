@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const FooterWrapper = styled.footer`
-  font-size: 1rem;
+  font-size: 0.8rem;
   padding: 1rem 0;
   text-align: center;
   color: white;
@@ -15,7 +15,7 @@ const FooterWrapper = styled.footer`
     text-decoration: none;
     transition: 0.2s;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 0.8rem;
     letter-spacing: 1px;
   }
   a:hover {

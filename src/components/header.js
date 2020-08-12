@@ -24,8 +24,8 @@ const Header = ({ siteTitle, location }) => {
           {siteTitle}
         </Link>
         {location.pathname === "/" ? (
-          <Link className="about-link" to="/about">
-            About
+          <Link className="about-link" to="/daily">
+            Daily JS
           </Link>
         ) : (
           <div />
