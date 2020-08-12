@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Nick Dambrosio`,
+    title: `Hooks and Hamburgers`,
     description: `A Software Development blog by Nick Dambrosio`,
     author: `@iaaafm`,
     authorName: "Nick Dambrosio",
-    siteUrl: `https://www.nick-dambrosio.com`,
+    siteUrl: `https://www.hooks-and-hamburgers.com`,
     repository: `https://github.com/30ozSteak/guard-and-grace`,
   },
   plugins: [

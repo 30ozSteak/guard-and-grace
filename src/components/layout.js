@@ -9,7 +9,9 @@ import Archive from "./archive"
 import "./layout.css"
 
 const ThemeProvider = styled.div`
-  padding: 0 15vw;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  max-width: 1100px;
   @media (max-width: 700px) {
     padding: 4vw !important;
   }
@@ -17,6 +19,7 @@ const ThemeProvider = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   ul {
     margin: 0;
     padding: 0;

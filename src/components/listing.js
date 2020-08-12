@@ -80,8 +80,11 @@ const Listing = () => {
         <p className="recent-heading">Recently Published</p>
 
         {data.allMarkdownRemark.edges.map(edge => (
-          <Link to={`/posts${edge.node.frontmatter.slug}`}>
-            <Post key={edge.node.frontmatter.slug}>
+          <Link
+            key={edge.node.frontmatter.slug}
+            to={`/posts${edge.node.frontmatter.slug}`}
+          >
+            <Post>
               <h2>{edge.node.frontmatter.title}</h2>
               <p className="description"> {edge.node.frontmatter.desc}</p>
 

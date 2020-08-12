@@ -15,6 +15,7 @@ const FooterWrapper = styled.footer`
     text-decoration: none;
     transition: 0.2s;
     font-weight: 300;
+    font-size: 1rem;
     letter-spacing: 1px;
   }
   a:hover {
