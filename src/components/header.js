@@ -1,16 +1,12 @@
+import React, { useState } from "react"
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import Hamburger from "./hamburger"
 import Socials from "./socials"
-import React, { useState } from "react"
-import "../styles/Header.css"
+import "../Styles/header.css"
 
 const Header = ({ siteTitle, location }) => {
   const [isNavOpen, setNavOpen] = useState(false)
-  const toggleNavOpen = () => {
-    console.log("lol")
-    setNavOpen(!isNavOpen)
-  }
+  const toggleNavOpen = () => setNavOpen(!isNavOpen)
 
   return (
     <div className="header">

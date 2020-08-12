@@ -12,7 +12,6 @@
   font-weight: 600;
   text-decoration: none;
   transition: 0.2s;
-  margin-right: 3rem;
 }
 
 .header .blog-name.smaller {
@@ -21,7 +20,7 @@
 
 .header .about-link {
   font-size: 0.9rem;
-  margin-right: 2rem;
+  margin-left: 2rem;
   color: #9c97ad;
   letter-spacing: 1px;
   transition: 0.2s;
@@ -44,6 +43,12 @@
   .header {
     margin-top: 1rem !important;
   }
+
+  .header .blog-name {
+    margin-right: none !important;
+    padding: none;
+  }
+
   .header .about-link {
     display: none;
   }
