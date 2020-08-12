@@ -2,30 +2,6 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
 
-const LISTING_QUERY = graphql`
-  query BlogPostListing {
-    allMarkdownRemark(
-      limit: 10
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
-      edges {
-        node {
-          id
-          excerpt(pruneLength: 250)
-
-          frontmatter {
-            title
-            slug
-            date
-            desc
-            topics
-          }
-        }
-      }
-    }
-  }
-`
-
 const Post = styled.article`
   margin-bottom: 4rem;
   :hover h2 {
@@ -75,7 +51,7 @@ const Listing = () => {
   const data = useStaticQuery(LISTING_QUERY)
 
   return (
-    <div>
+    <>
       <ul>
         <p className="recent-heading">Recently Published</p>
 
@@ -95,7 +71,31 @@ const Listing = () => {
           </Link>
         ))}
       </ul>
-    </div>
+    </>
   )
 }
 export default Listing
+
+const LISTING_QUERY = graphql`
+  query BlogPostListing {
+    allMarkdownRemark(
+      limit: 10
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+
+          frontmatter {
+            title
+            slug
+            date
+            desc
+            topics
+          }
+        }
+      }
+    }
+  }
+`
