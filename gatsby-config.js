@@ -23,8 +23,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Nicks Personal Blog`,
-        short_name: `Nicks Blog`,
+        name: `Hooks and Hamburgers`,
+        short_name: `HooksHamburgers`,
         start_url: `/`,
         background_color: `#121212`,
         theme_color: `#121212`,
