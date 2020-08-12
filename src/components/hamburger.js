@@ -2,7 +2,7 @@ import React from "react"
 
 import { animated, useSpring, config } from "react-spring"
 // import { StoreContext } from "../../context/StoreContext"
-import "../Styles/header.css"
+import "./header.css"
 
 let openedHamburger = {
   top: "translate(2, 7) rotate(0)",
