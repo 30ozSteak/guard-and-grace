@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import Hamburger from "./hamburger"
 import Socials from "./socials"
-import "../styles/header.css"
+import "../../src/styles/header.css"
 
 const Header = ({ siteTitle, location }) => {
   const [isNavOpen, setNavOpen] = useState(false)
