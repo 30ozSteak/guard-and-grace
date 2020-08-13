@@ -76,6 +76,12 @@ const ContactCardWrapper = styled.div`
   }
 `
 export default function Contact() {
+  const [submittedForm, setHasSubmittedForm] = useState(false)
+
+  const handleSubmit = () => {
+    setHasSubmittedForm(true)
+  }
+
   return (
     <ContactCardWrapper>
       <div className="contact-greeting">
@@ -85,11 +91,13 @@ export default function Contact() {
           Let's come up with a plan for learning something new.
         </p>
       </div>
+
       <div className="contact-form">
         <form
           name="contact"
           method="post"
           data-netlify="true"
+          action="/success"
           data-netlify-honeypot="bot-field"
         >
           <input type="hidden" name="bot-field" />
@@ -106,7 +114,12 @@ export default function Contact() {
             <label htmlFor="message">Message</label>
             <textarea name="message" id="message" rows="6" />
           </div>
-          <button type="submit" value="Send Message" className="button">
+          <button
+            type="submit"
+            value="Send Message"
+            className="button"
+            onClick={handleSubmit}
+          >
             Submit
           </button>
         </form>
