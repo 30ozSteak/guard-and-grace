@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import Socials from "./socials"
-import Image from "../components/image"
+
+import imageSrc from "../images/steak-profile.jpg"
 
 import { useSpring, animated, config } from "react-spring"
 import "./menu.css"
@@ -20,7 +21,15 @@ const Menu = ({ isOpen }) => {
         }}
         className="menu-card"
       >
-        <Image />
+        <img
+          alt="nicks pretty face"
+          src={imageSrc}
+          className="profile-picture"
+        />
+        <p>
+          Hi, 👋 <br /> I'm Nick, a Software Developer from Denver, Colorado.{" "}
+          <br />
+        </p>
         <Socials />
       </animated.div>
     </div>
