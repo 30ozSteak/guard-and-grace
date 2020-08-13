@@ -4,7 +4,6 @@ import Hamburger from "./hamburger"
 import Socials from "./socials"
 import Menu from "./menu"
 import "./header.css"
-import Image from "../components/image"
 
 const Header = ({ siteTitle, location }) => {
   const [isNavOpen, setNavOpen] = useState(false)
@@ -35,7 +34,6 @@ const Header = ({ siteTitle, location }) => {
         <Hamburger isNavOpen={isNavOpen} toggleNavOpen={toggleNavOpen} />
       </div>
       <Menu isOpen={isNavOpen} />
-      <Image />
     </div>
   )
 }
