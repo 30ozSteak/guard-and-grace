@@ -76,27 +76,6 @@ const ContactCardWrapper = styled.div`
   }
 `
 export default function Contact() {
-  const [value, setValue] = useState({})
-
-  const handleChange = e => {
-    setValue({ ...value, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = e => {
-    e.preventDefault()
-    const form = e
-      .targetfetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encodeURI({
-          "form-name": form.getAttribute("name"),
-          ...value,
-        }),
-      })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch(error => alert(error))
-  }
-
   return (
     <ContactCardWrapper>
       <div className="contact-greeting">
@@ -110,41 +89,26 @@ export default function Contact() {
         <form
           name="contact"
           method="post"
-          action="/thanks/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
         >
+          <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
-          <p hidden>
-            <label>
-              Don’t fill this out:{" "}
-              <input name="bot-field" onChange={handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your name:
-              <input type="text" name="name" onChange={handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your email:
-              <input type="email" name="email" onChange={handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Message:
-              <textarea name="message" onChange={handleChange} />
-            </label>
-          </p>
-          <p>
-            <button className="button" type="submit">
-              Send
-            </button>
-          </p>
+          <div className="field half first">
+            <label htmlFor="name">Name</label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div className="field half">
+            <label htmlFor="email">Email</label>
+            <input type="text" name="email" id="email" />
+          </div>
+          <div className="field">
+            <label htmlFor="message">Message</label>
+            <textarea name="message" id="message" rows="6" />
+          </div>
+          <button type="submit" value="Send Message" className="button">
+            Submit
+          </button>
         </form>
       </div>
     </ContactCardWrapper>
