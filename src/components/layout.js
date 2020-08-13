@@ -13,7 +13,7 @@ const ThemeProvider = styled.div`
   grid-template-columns: 2fr 1fr;
   max-width: 1100px;
   @media (max-width: 1100px) {
-    padding: 4vw !important;
+    padding: 2rem !important;
   }
   margin: auto;
   display: flex;

@@ -18,19 +18,23 @@
   font-size: 1rem;
 }
 
-.header .about-link {
+.header .daily {
   font-size: 0.9rem;
   margin-left: 2rem;
   color: #9c97ad;
   letter-spacing: 1px;
   transition: 0.2s;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .hamburger-menu {
   cursor: pointer;
+  position: fixed;
+  top: 2.2rem;
   padding: 0;
+  right: 1.5rem;
   background-color: none;
+  z-index: 1000;
 }
 
 @media (min-width: 701px) {
@@ -49,7 +53,7 @@
     padding: none;
   }
 
-  .header .about-link {
+  .header .daily {
     display: none;
   }
 
@@ -61,12 +65,12 @@
   }
 }
 
-.header div {
+.header div:nth-child(2) {
   display: flex;
   align-items: center;
 }
 
-.header .about-link:hover {
+.header .daily:hover {
   color: white;
 }
 
@@ -88,4 +92,10 @@ button {
   border: 1px solid transparent;
   outline: none;
   background-color: transparent;
+}
+
+.synopsis {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #9c97ad !important;
 }

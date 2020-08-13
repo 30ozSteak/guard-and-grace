@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { navigate } from "gatsby-link"
 import styled from "styled-components"
 
 const ContactCardWrapper = styled.div`

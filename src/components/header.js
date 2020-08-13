@@ -2,7 +2,9 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import Hamburger from "./hamburger"
 import Socials from "./socials"
+import Menu from "./menu"
 import "./header.css"
+import Image from "../components/image"
 
 const Header = ({ siteTitle, location }) => {
   const [isNavOpen, setNavOpen] = useState(false)
@@ -10,7 +12,7 @@ const Header = ({ siteTitle, location }) => {
 
   return (
     <div className="header">
-      <div>
+      <div className="header-links">
         <Link
           to="/"
           className={
@@ -19,18 +21,21 @@ const Header = ({ siteTitle, location }) => {
         >
           {siteTitle}
         </Link>
-        {location.pathname === "/" ? (
-          <Link className="about-link" to="/daily">
+        {/* {location.pathname === "/" ? (
+          <Link className="daily" to="/daily">
             Daily JS
           </Link>
         ) : (
           <div />
-        )}
+        )} */}
+        <p className="synopsis">Nick's Devblog</p>
       </div>
       <div>
         {location.pathname === "/" && <Socials />}
         <Hamburger isNavOpen={isNavOpen} toggleNavOpen={toggleNavOpen} />
       </div>
+      <Menu isOpen={isNavOpen} />
+      <Image />
     </div>
   )
 }

@@ -8,14 +8,14 @@ let openedHamburger = {
   top: "translate(2, 7) rotate(0)",
   center: "translate(2, 19) rotate(0)",
   bottom: "translate(2, 31) rotate(0)",
-  color: "#fff",
+  color: "#ff0b77",
 }
 
 let closedHamburger = {
   top: "translate(7, 32) rotate(-45)",
   center: "translate(10, 4) rotate(45)",
   bottom: "translate(7, 32) rotate(-45)",
-  color: "#fff",
+  color: "#ff0b77",
 }
 
 const Hamburger = ({ isNavOpen, toggleNavOpen }) => {
@@ -27,8 +27,8 @@ const Hamburger = ({ isNavOpen, toggleNavOpen }) => {
   return (
     <button onClick={toggleNavOpen}>
       <animated.svg
-        width="25"
-        height="58"
+        width="30"
+        height="48"
         viewBox="0 0 44 41"
         fill={color}
         xmlns="http://www.w3.org/2000/svg"
