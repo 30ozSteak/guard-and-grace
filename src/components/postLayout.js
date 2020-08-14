@@ -27,6 +27,11 @@ const postLayout = props => {
 
 const BlogPost = styled.ul`
   max-width: 50rem;
+
+  a {
+    word-wrap: break-word !important;
+  }
+
   .title-block h1 {
     color: white;
   }
@@ -43,6 +48,10 @@ const BlogPost = styled.ul`
 
   a:hover {
     text-decoration: underline;
+  }
+
+  p {
+    word-wrap: break-word !important;
   }
 `
 

@@ -63,7 +63,7 @@ However, after writing your third or fourth `useState` in the same component, yo
 
 What is _useReducer_ ? It's a hook based off of Javascript's very popular _reduce_ function. Definitely a topic that will require it's own blog post eventually, until then, here are a few outstanding posts by other people on it
 
-- [https://css-tricks.com/understanding-the-almighty-reducer/](Sarah Drasner on Javascript Reduce)
+[Sarah Drasner: The Almighty Reducer](https://css-tricks.com/understanding-the-almighty-reducer/)
 
 An important takeaway of the _reducer_ is it will always return one value, By _reducing_ the previous value down to a single representative one. Reducers are incredibly powerful and it's hard to get far in development without encountering them.
 

@@ -62,6 +62,7 @@ const ContactCardWrapper = styled.div`
     .contact-greeting {
       width: 100%;
       text-align: center;
+      padding-bottom: 0;
     }
 
     .contact-form {

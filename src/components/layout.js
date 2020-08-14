@@ -15,6 +15,9 @@ const ThemeProvider = styled.div`
   @media (max-width: 1100px) {
     padding: 2rem !important;
   }
+  @media (min-width: 400px) {
+    padding: 1rem !important;
+  }
   margin: auto;
   display: flex;
   flex-direction: column;
