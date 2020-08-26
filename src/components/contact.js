@@ -85,7 +85,7 @@ export default function Contact() {
   return (
     <ContactCardWrapper>
       <div className="contact-greeting">
-        <h2>Interested in Development, but not sure how to start?</h2>
+        <h2>Interested in development, but not sure how to start?</h2>
         <p>
           I'm always open for mentorship! <br />
           Let's come up with a plan for learning something new.
