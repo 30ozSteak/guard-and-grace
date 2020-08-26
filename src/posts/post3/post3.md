@@ -8,9 +8,14 @@ topics: "React Hooks"
 
 Last time we looked into React Hooks and why they've been introduced, then we refactored a react component built as a class into a function component using hooks, allowing us to share logic between components. Now we're going to look at managing complex state with useState and useReducer.
 
+See the code in this blog in action at <br/><br/>
+
+[Counter with useState and useReducer](https://repl.it/@imsteaky/UnlinedLatestComputerscience#src/App.js)
 <br/>
 
 ## React useState hook
+
+<hr/>
 
 `useState` is a basic hook that allows us to have local state in a functional component.
 
@@ -117,11 +122,15 @@ function Counter({ initialValue = 0 }) {
 }
 ```
 
-Hrmm. We did it, but that's a lot of _slightly different_, but mostly repetitive, code.
+<div style='display: flex; justify-content: center; margin: 2rem 0'>
+  <img src="https://user-images.githubusercontent.com/34214595/91326832-04c4ea00-e782-11ea-96c4-fbd94dacdcf2.gif"/>
+</div>
+Hrmm. We did it, but that's a lot of slightly different, but mostly repetitive, code.
 <br/>
-<img src="https://media.giphy.com/media/l0He8i34poZIo3kY0/giphy.gif"/>
+<br/>
+<br/>
 
-## useReducer 🔥🔥🔥
+## React useReducer hook 🔥🔥🔥
 
 ---
 
@@ -199,6 +208,39 @@ const CounterReducer = ({ initialState = 0 }) => {
 }
 ```
 
-<img src="https://media2.giphy.com/media/bzn3aznEbnh28/giphy.gif?cid=ecf05e47w5zqm86fifipqb4lworezmy4q22pv6o5hggqhe3i&rid=giphy.gif">
+<div style='display: flex; justify-content: center; margin: 2rem 0'>
+  <img src="https://user-images.githubusercontent.com/34214595/91326839-07274400-e782-11ea-9e96-63d82677ee55.gif"/>
+</div>
 
-**_this is still in progress_**
+Nice! And it looks pretty similar to the architecture used in popular state management library, _Redux_.
+
+Instead of using a bunch of useState updater functions, useReducer centralizes the state logic of the component into a single _reducer_ function.
+
+Our _lord and savior Dan Abramov_ summed up in a tweet of when to use `useState` or `useReducer` when managing component state:
+
+<h1>When to use useReducer</h1>
+<div style='display: flex; justify-content: center; margin: 2rem 0'>
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Should I use multiple useState or useReducer?<br><br>For independent things (isHovering and textInput), multiple useState.<br><br>For things that change together (isFetching and fetchedItems), or if their next state depends on previous (todos), I prefer useReducer.<a href="https://t.co/wSyKITMRpZ">https://t.co/wSyKITMRpZ</a></p>&mdash; Dan Abramov (@dan_abramov) <a href="https://twitter.com/dan_abramov/status/1083330668522864640?ref_src=twsrc%5Etfw">January 10, 2019</a></blockquote>
+</div>
+
+For me, I use `useState` until it feels like the components stateful logic is overly complex. Forms and CRUD applications are a great example of when you'd benefit from `useReducer` over `useState`. We'll build a todo-list using `useReducer` _next time_.
+
+## <h1>Recap</h1>
+
+- `useReducer` > `useState` when handling complex state logic that involves multiple sub values, or when the next state is reliant on the previous state
+
+- When called, `useReducer` will return an array of two items: Current State and a Dispatch method
+
+- `useReducer` accepts three arguments:
+
+  - reducer function
+  - initial state
+  - third, optional init function for lazy initialization of state
+
+- Reducers are responsible for handliong transitions from one state to the next. They take in current state and an action and return a new state
+
+- Actions are _unique events_ that happen in your app
+
+- Actions are dispatched to our reducer when specific events take place.
+
+_Hot Damn_ that was a long post. Thanks for reading!
